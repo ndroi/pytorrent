@@ -87,7 +87,7 @@ def proxy_dump(stream,item):
         dump_list(stream,item)
     elif isinstance(item,types.StringType):
         dump_str(stream,item)
-    elif isinstance(item,types.IntType):
+    elif isinstance(item,types.IntType) or isinstance(item,types.LongType):
         dump_num(stream,item)
     else:
         raise Exception("dump info error")
